@@ -9,21 +9,21 @@
             var result = numA + numB;
             document.getElementById("result").innerHTML = "Summe: " + result;
         }
- 
+
         function subtract2Numbers() {
             var numA = parseFloat(document.getElementById('num1').value);
             var numB = parseFloat(document.getElementById('num2').value);
             var result = numA - numB;
             document.getElementById("result").innerHTML = "Differenz: " + result;
         }
- 
+
         function multiply2Numbers() {
             var numA = parseFloat(document.getElementById('num1').value);
             var numB = parseFloat(document.getElementById('num2').value);
             var result = numA * numB;
             document.getElementById("result").innerHTML = "Produkt: " + result;
         }
- 
+
         function divide2Numbers() {
             var numA = parseFloat(document.getElementById('num1').value);
             var numB = parseFloat(document.getElementById('num2').value);
@@ -34,12 +34,25 @@
                 document.getElementById("result").innerHTML = "Quotient: " + result;
             }
         }
- 
+
         function average2Numbers() {
             var numA = parseFloat(document.getElementById('num1').value);
             var numB = parseFloat(document.getElementById('num2').value);
             var result = (numA + numB) / 2;
             document.getElementById("result").innerHTML = "Durchschnitt: " + result;
+        }
+
+        function power2Numbers() {
+            var numA = parseFloat(document.getElementById('num1').value);
+            var numB = parseFloat(document.getElementById('num2').value);
+            var result = Math.pow(numA, numB);
+            document.getElementById("result").innerHTML = "Potenz: " + result;
+        }
+
+        function sqrtNumber() {
+            var numA = parseFloat(document.getElementById('num1').value);
+            var result = Math.sqrt(numA);
+            document.getElementById("result").innerHTML = "Wurzel: " + result;
         }
     </script>
 </head>
@@ -53,12 +66,13 @@
         </form>
     </h1>
     <p>
-        <button onclick="document.getElementById('num1').value='irgendwas'">Change the world 1</button>
         <button onclick="add2Numbers()">Add</button>
         <button onclick="subtract2Numbers()">Subtract</button>
         <button onclick="multiply2Numbers()">Multiply</button>
         <button onclick="divide2Numbers()">Divide</button>
         <button onclick="average2Numbers()">Average</button>
+        <button onclick="power2Numbers()">Power</button>
+        <button onclick="sqrtNumber()">Square Root</button>
     </p>
     <p id="result"></p>
 </body>
