@@ -54,6 +54,16 @@
             var result = Math.sqrt(numA);
             document.getElementById("result").innerHTML = "Wurzel: " + result;
         }
+
+        function logarithmNumber() {
+            var numA = parseFloat(document.getElementById('num1').value);
+            if (numA <= 0) {
+                document.getElementById("result").innerHTML = "Fehler: Logarithmus ist für nicht positive Zahlen nicht definiert!";
+            } else {
+                var result = Math.log(numA);
+                document.getElementById("result").innerHTML = "Logarithmus: " + result;
+            }
+        }
     </script>
 </head>
 <body>
@@ -73,6 +83,7 @@
         <button onclick="average2Numbers()">Average</button>
         <button onclick="power2Numbers()">Power</button>
         <button onclick="sqrtNumber()">Square Root</button>
+        <button onclick="logarithmNumber()">Logarithm</button>
     </p>
     <p id="result"></p>
 </body>
